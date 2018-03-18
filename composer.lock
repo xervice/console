@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa2c900a65283ae7aea9de9cffff750f",
+    "content-hash": "1b7b9cc43f7b159371df65d0490343dc",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -234,16 +234,16 @@
         },
         {
             "name": "xervice/config",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xervice/config.git",
-                "reference": "223342c0a93280a8c55b72a32c909b28cf64690a"
+                "reference": "098c7473d2a80a70f6b58e96de1c5c0e02d1b132"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xervice/config/zipball/223342c0a93280a8c55b72a32c909b28cf64690a",
-                "reference": "223342c0a93280a8c55b72a32c909b28cf64690a",
+                "url": "https://api.github.com/repos/xervice/config/zipball/098c7473d2a80a70f6b58e96de1c5c0e02d1b132",
+                "reference": "098c7473d2a80a70f6b58e96de1c5c0e02d1b132",
                 "shasum": ""
             },
             "require-dev": {
@@ -268,26 +268,26 @@
                 }
             ],
             "description": "Config environment to xervice components",
-            "time": "2018-03-17T20:44:17+00:00"
+            "time": "2018-03-18T11:38:54+00:00"
         },
         {
             "name": "xervice/core",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xervice/core.git",
-                "reference": "634bf4efa8b1649abd64ee7964f3a59affd64126"
+                "reference": "161533b00bea8a98ae25445cdf0bf7afb87088bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xervice/core/zipball/634bf4efa8b1649abd64ee7964f3a59affd64126",
-                "reference": "634bf4efa8b1649abd64ee7964f3a59affd64126",
+                "url": "https://api.github.com/repos/xervice/core/zipball/161533b00bea8a98ae25445cdf0bf7afb87088bc",
+                "reference": "161533b00bea8a98ae25445cdf0bf7afb87088bc",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.0",
                 "pimple/pimple": "3.2.*",
-                "xervice/config": ">=1.1.2"
+                "xervice/config": ">=1.1.3"
             },
             "require-dev": {
                 "codeception/codeception": "*",
@@ -314,7 +314,7 @@
                 }
             ],
             "description": "Xervice core functionality",
-            "time": "2018-03-18T09:53:05+00:00"
+            "time": "2018-03-18T11:42:58+00:00"
         }
     ],
     "packages-dev": [
