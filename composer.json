@@ -12,13 +12,15 @@
     "symfony/var-dumper": "*"
   },
   "require": {
-    "xervice/core": "^1.3.1",
+    "xervice/core": "^1.0.0",
     "symfony/console": "4.0.*"
   },
   "autoload": {
     "psr-4": {
-      "Xervice\\": "src/",
       "XerviceTest\\": "tests/Xervice"
+    },
+    "psr-0": {
+      "Xervice\\": "src/"
     }
   },
   "bin": ["bin/xervice"]
