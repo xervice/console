@@ -12,8 +12,7 @@
     "symfony/var-dumper": "*"
   },
   "require": {
-    "xervice/config": "dev-master",
-    "xervice/core": "dev-master",
+    "xervice/core": "^1.0.0",
     "symfony/console": "4.0.*"
   },
   "autoload": {
