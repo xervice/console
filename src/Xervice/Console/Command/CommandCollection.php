@@ -39,12 +39,12 @@ class CommandCollection implements \Iterator, \Countable
     /**
      * @return mixed|\Xervice\Console\Command\AbstractCommand
      */
-    public function current()
+    public function current(): AbstractCommand
     {
         return $this->collection[$this->position];
     }
 
-    public function next()
+    public function next(): void
     {
         $this->position++;
     }
@@ -52,7 +52,7 @@ class CommandCollection implements \Iterator, \Countable
     /**
      * @return int
      */
-    public function key()
+    public function key(): int
     {
         return $this->position;
     }
@@ -60,12 +60,12 @@ class CommandCollection implements \Iterator, \Countable
     /**
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         return isset($this->collection[$this->position]);
     }
 
-    public function rewind()
+    public function rewind(): void
     {
         $this->position = 0;
     }
@@ -73,10 +73,8 @@ class CommandCollection implements \Iterator, \Countable
     /**
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return \count($this->collection);
     }
-
-
 }

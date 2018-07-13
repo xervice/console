@@ -11,11 +11,10 @@ class Application extends \Symfony\Component\Console\Application implements Appl
     /**
      * @param \Xervice\Console\Command\CommandCollection $commandCollection
      */
-    public function addCommandCollection(CommandCollection $commandCollection)
+    public function addCommandCollection(CommandCollection $commandCollection): void
     {
         foreach ($commandCollection as $command) {
             $this->add($command);
         }
     }
-
 }

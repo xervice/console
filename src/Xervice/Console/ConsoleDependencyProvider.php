@@ -10,19 +10,20 @@ use Xervice\Core\Dependency\Provider\AbstractProvider;
 
 class ConsoleDependencyProvider extends AbstractProvider
 {
-    const COMMAND_COLLECTION = 'command.collection';
+    public const COMMAND_COLLECTION = 'command.collection';
 
     /**
-     * @param \Xervice\Core\Dependency\DependencyProviderInterface $container
+     * @param \Xervice\Core\Dependency\DependencyProviderInterface $dependencyProvider
      */
-    public function handleDependencies(DependencyProviderInterface $container)
+    public function handleDependencies(DependencyProviderInterface $dependencyProvider): void
     {
-        $container[self::COMMAND_COLLECTION] = function (DependencyProviderInterface $container) {
+        $dependencyProvider[self::COMMAND_COLLECTION] = function () {
             return new CommandCollection(
                 $this->getCommandList()
             );
         };
     }
+
 
     /**
      * @return array
@@ -31,5 +32,4 @@ class ConsoleDependencyProvider extends AbstractProvider
     {
         return [];
     }
-
 }

@@ -5,6 +5,7 @@ namespace Xervice\Console;
 
 
 use Xervice\Console\Application\Application;
+use Xervice\Console\Command\CommandCollection;
 use Xervice\Core\Factory\AbstractFactory;
 
 class ConsoleFactory extends AbstractFactory
@@ -12,7 +13,7 @@ class ConsoleFactory extends AbstractFactory
     /**
      * @return \Xervice\Console\Application\Application
      */
-    public function createApplication()
+    public function createApplication(): Application
     {
         $app = new Application();
         $app->addCommandCollection($this->getCommandCollection());
@@ -22,7 +23,7 @@ class ConsoleFactory extends AbstractFactory
     /**
      * @return \Xervice\Console\Command\CommandCollection
      */
-    public function getCommandCollection()
+    public function getCommandCollection(): CommandCollection
     {
         return $this->getDependency(ConsoleDependencyProvider::COMMAND_COLLECTION);
     }
