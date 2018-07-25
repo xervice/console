@@ -23,10 +23,11 @@ There is nothing to configure. But to add your commands, you have to extend the 
 
 namespace App\Console;
 
+use Xervice\Console\ConsoleDependencyProvider as XerviceConsoleDependencyProvider;
 use Xervice\Core\Dependency\DependencyProviderInterface;
 use Xervice\Core\Dependency\Provider\AbstractProvider;
 
-class ConsoleDependencyProvider extends AbstractProvider
+class ConsoleDependencyProvider extends XerviceConsoleDependencyProvider
 {
     /**
      * @return array
