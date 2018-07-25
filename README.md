@@ -41,6 +41,12 @@ class ConsoleDependencyProvider extends AbstractProvider
 
 ```
 
+Usage
+-------
+```
+vendor/bin/xervice <command>
+```
+
 New Command
 --------------
 ```php
