@@ -1,5 +1,5 @@
 Xervice: Console
-============
+=================
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/xervice/console/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/xervice/console/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/xervice/console/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/xervice/console/?branch=master)
@@ -24,15 +24,13 @@ There is nothing to configure. But to add your commands, you have to extend the 
 namespace App\Console;
 
 use Xervice\Console\ConsoleDependencyProvider as XerviceConsoleDependencyProvider;
-use Xervice\Core\Dependency\DependencyProviderInterface;
-use Xervice\Core\Dependency\Provider\AbstractProvider;
 
 class ConsoleDependencyProvider extends XerviceConsoleDependencyProvider
 {
     /**
      * @return array
      */
-    protected function getCommandList() : array
+    protected function getCommandList(): array
     {
         return [
             new MyCommand()
@@ -55,14 +53,13 @@ New Command
 
 namespace App\MyModule\Communication\Console\Command;
 
-use Core\Locator\Dynamic\ServiceNotParseable;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Xervice\Console\Command\AbstractCommand;
+use Xervice\Console\Business\Model\Command\AbstractCommand;
 
 /**
- * @method \App\MyModule\MyModuleFacade getFacade()
- * @method \App\MyModule\MyModuleFactory getFactory()
+ * @method \App\MyModule\Business\MyModuleFacade getFacade()
+ * @method \App\MyModule\Communication\MyModuleCommunicationFactory getFactory()
  */
 class MyCommand extends AbstractCommand
 {
