@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Xervice\Console\Command;
+namespace Xervice\Console\Business\Model\Command;
 
 
 class CommandCollection implements \Iterator, \Countable
 {
     /**
-     * @var \Xervice\Console\Command\AbstractCommand[]
+     * @var \Xervice\Console\Business\Model\Command\AbstractCommand[]
      */
     private $collection;
 
@@ -19,7 +19,7 @@ class CommandCollection implements \Iterator, \Countable
     /**
      * CommandCollection constructor.
      *
-     * @param \Xervice\Console\Command\AbstractCommand[] $collection
+     * @param \Xervice\Console\Business\Model\Command\AbstractCommand[] $collection
      */
     public function __construct(array $collection)
     {
@@ -29,7 +29,7 @@ class CommandCollection implements \Iterator, \Countable
     }
 
     /**
-     * @param \Xervice\Console\Command\AbstractCommand $command
+     * @param \Xervice\Console\Business\Model\Command\AbstractCommand $command
      */
     public function add(AbstractCommand $command)
     {
@@ -37,7 +37,7 @@ class CommandCollection implements \Iterator, \Countable
     }
 
     /**
-     * @return mixed|\Xervice\Console\Command\AbstractCommand
+     * @return \Xervice\Console\Business\Model\Command\AbstractCommand
      */
     public function current(): AbstractCommand
     {

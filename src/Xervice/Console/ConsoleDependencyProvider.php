@@ -4,26 +4,29 @@
 namespace Xervice\Console;
 
 
-use Xervice\Console\Command\CommandCollection;
-use Xervice\Core\Dependency\DependencyProviderInterface;
-use Xervice\Core\Dependency\Provider\AbstractProvider;
+use Xervice\Console\Business\Model\Command\CommandCollection;
+use Xervice\Core\Business\Model\Dependency\DependencyContainerInterface;
+use Xervice\Core\Business\Model\Dependency\Provider\AbstractDependencyProvider;
 
-class ConsoleDependencyProvider extends AbstractProvider
+class ConsoleDependencyProvider extends AbstractDependencyProvider
 {
     public const COMMAND_COLLECTION = 'command.collection';
 
     /**
-     * @param \Xervice\Core\Dependency\DependencyProviderInterface $dependencyProvider
+     * @param \Xervice\Core\Business\Model\Dependency\DependencyContainerInterface $container
+     *
+     * @return \Xervice\Core\Business\Model\Dependency\DependencyContainerInterface
      */
-    public function handleDependencies(DependencyProviderInterface $dependencyProvider): void
+    public function handleDependencies(DependencyContainerInterface $container): DependencyContainerInterface
     {
-        $dependencyProvider[self::COMMAND_COLLECTION] = function () {
+        $container[self::COMMAND_COLLECTION] = function () {
             return new CommandCollection(
                 $this->getCommandList()
             );
         };
-    }
 
+        return $container;
+    }
 
     /**
      * @return array

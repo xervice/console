@@ -6,7 +6,7 @@ namespace XerviceTest\Console\Command;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Xervice\Console\Command\AbstractCommand;
+use Xervice\Console\Business\Model\Command\AbstractCommand;
 
 class TestCommand extends AbstractCommand
 {
@@ -19,7 +19,6 @@ class TestCommand extends AbstractCommand
             ->setName('console:test')
             ->setDescription('Test command')
             ->setHelp('Command for testing the console service');
-
     }
 
     /**

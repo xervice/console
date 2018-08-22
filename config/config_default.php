@@ -1,3 +1,7 @@
 <?php
 
-$config[\Xervice\Core\CoreConfig::PROJECT_LAYER_NAMESPACE] = 'XerviceTest';
+use Xervice\Core\CoreConfig;
+
+$config[CoreConfig::PROJECT_NAMESPACES] = [
+    'XerviceTest'
+];

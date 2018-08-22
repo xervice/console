@@ -1,15 +1,15 @@
 <?php
 
 
-namespace Xervice\Console;
+namespace Xervice\Console\Business;
 
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Xervice\Core\Facade\AbstractFacade;
+use Xervice\Core\Business\Model\Facade\AbstractFacade;
 
 /**
- * @method \Xervice\Console\ConsoleFactory getFactory()
+ * @method \Xervice\Console\Business\ConsoleBusinessFactory getFactory()
  */
 class ConsoleFacade extends AbstractFacade
 {

@@ -1,15 +1,15 @@
 <?php
 
 
-namespace Xervice\Console\Application;
+namespace Xervice\Console\Business\Model\Application;
 
 
-use Xervice\Console\Command\CommandCollection;
+use Xervice\Console\Business\Model\Command\CommandCollection;
 
 class Application extends \Symfony\Component\Console\Application implements ApplicationInterface
 {
     /**
-     * @param \Xervice\Console\Command\CommandCollection $commandCollection
+     * @param \Xervice\Console\Business\Model\Command\CommandCollection $commandCollection
      */
     public function addCommandCollection(CommandCollection $commandCollection): void
     {

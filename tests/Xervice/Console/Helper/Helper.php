@@ -4,9 +4,9 @@
 namespace XerviceTest\Console\Helper;
 
 
-use Xervice\Core\Locator\Dynamic\DynamicLocator;
+use Xervice\Core\Business\Model\Locator\Dynamic\Business\DynamicBusinessLocator;
 
 class Helper
 {
-    use DynamicLocator;
+    use DynamicBusinessLocator;
 }

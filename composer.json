@@ -9,19 +9,25 @@
   ],
   "require-dev": {
     "codeception/codeception": "*",
-    "symfony/var-dumper": "*"
+    "symfony/var-dumper": "*",
+    "phpstan/phpstan": "^0.9.0"
   },
   "require": {
-    "xervice/core": "^3.0.0",
-    "symfony/console": "4.0.*"
+    "xervice/core": "^4.0.0",
+    "symfony/console": "^4.0.0"
   },
   "autoload": {
-    "psr-4": {
-      "XerviceTest\\": "tests/Xervice"
-    },
     "psr-0": {
       "Xervice\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "XerviceTest\\": "tests/Xervice"
+    }
+  },
+  "scripts": {
+    "phpstan": "vendor/bin/phpstan analyse src --level=7"
   },
   "bin": ["bin/xervice"]
 }
